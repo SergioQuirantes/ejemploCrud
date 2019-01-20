@@ -7,5 +7,4 @@ import com.formacionsergio.ejemploCrud.model.TODO;
 
 @Repository("todoRepository")
 public interface TODORepository extends JpaRepository<TODO, Long> {
-
 }

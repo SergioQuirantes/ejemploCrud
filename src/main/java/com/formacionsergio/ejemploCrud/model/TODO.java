@@ -16,7 +16,7 @@ public class TODO {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	@Column(name = "TODO_id")
+	@Column(name = "TODO_id", updatable = false)
 	private Long id;
 	
 	@Column(name = "title", nullable = false)
@@ -37,21 +37,14 @@ public class TODO {
 	public TODO() {
 	}
 
-	public TODO(Long id, String title, String description, String state, Date creationDate, Date modificationDate) {
-		this.id = id;
+	public TODO(String title, String description, String state) {
 		this.title = title;
 		this.description = description;
 		this.state = state;
-		this.creationDate = creationDate;
-		this.modificationDate = modificationDate;
 	}
 
 	public Long getId() {
 		return id;
-	}
-
-	public void setId(Long id) {
-		this.id = id;
 	}
 
 	public String getTitle() {
