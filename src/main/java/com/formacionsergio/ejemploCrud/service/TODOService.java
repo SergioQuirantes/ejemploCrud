@@ -1,6 +1,7 @@
 package com.formacionsergio.ejemploCrud.service;
 
 import java.sql.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -27,7 +28,13 @@ public class TODOService {
 		todoRepository.save(todo);
 	}
 	
-	public TODO getTODO(Long id) {
+	
+	public List<TODO> getTODOs(){
+		return todoRepository.findAll();
+	}
+	
+	
+	public TODO getTODObyId(Long id) {
 		
 		if(todoRepository.findById(id).isPresent()) {
 			return todoRepository.findById(id).get();
@@ -49,7 +56,7 @@ public class TODOService {
 		}
 	}
 	
-	public void deleteTODO(Long id) {
+	public void deleteTODOById(Long id) {
 		todoRepository.deleteById(id);
 	}
 	
