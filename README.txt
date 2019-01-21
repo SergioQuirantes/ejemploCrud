@@ -1,0 +1,2 @@
+Para el funcionamiento de la API es necesario tener un esquema en la base de datos MySQL llamado "crud".
+Para ver la documentación en swagger, iniciar la aplicación y entrar en: http://localhost:8080/swagger-ui.html
