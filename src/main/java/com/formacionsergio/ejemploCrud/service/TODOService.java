@@ -19,7 +19,7 @@ public class TODOService {
 		this.todoRepository = todoRepository;
 	}
 	
-	public void saveTODO(TODO todo) {
+	public void saveTODOs(TODO todo) {
 		Date sqlDate = new Date(new java.util.Date().getTime());
 		
 		todo.setCreationDate(sqlDate);
