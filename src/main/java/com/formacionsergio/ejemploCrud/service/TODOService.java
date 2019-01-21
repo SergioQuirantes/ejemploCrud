@@ -43,9 +43,9 @@ public class TODOService {
 		return null;		
 	}
 	
-	public void updateTODO(TODO todo) {
-		if(todoRepository.findById(todo.getId()).isPresent()) {
-			TODO todoActualizable = todoRepository.findById(todo.getId()).get();
+	public void updateTODO(TODO todo, Long id) {
+		if(todoRepository.findById(id).isPresent()) {
+			TODO todoActualizable = todoRepository.findById(id).get();
 			
 			todoActualizable.setTitle(todo.getTitle());
 			todoActualizable.setDescription(todo.getDescription());

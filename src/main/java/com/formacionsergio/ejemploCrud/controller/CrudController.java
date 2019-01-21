@@ -36,7 +36,7 @@ public class CrudController {
 	
 	@RequestMapping(value = "/TODO/{id}", method = RequestMethod.PATCH)
 	public void updateTODO(@PathVariable("id") Long id, @RequestBody TODO cuerpo) {
-		todoService.updateTODO(cuerpo);
+		todoService.updateTODO(cuerpo, id);
 	}
 	
 	@RequestMapping(value = "/TODO/{id}", method = RequestMethod.DELETE)
